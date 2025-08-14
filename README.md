@@ -12,18 +12,22 @@
 $ uv python install
 ```
 
-## 开发环境设置
+## 运行项目
 
 ### 安装开发依赖
 
 ```bash
 # 安装项目依赖和开发工具
 make install
-
-# 或者手动执行
-uv venv
-uv pip install -e .
 ```
+
+### 运行项目
+
+``` python
+# dir为可选参数
+$ make start url="你的目标URL" [dir="下载目录"]
+```
+
 
 ## 代码质量工具
 
@@ -72,11 +76,4 @@ uv run mypy .
 
 # 运行pre-commit检查
 uv run pre-commit run --all-files
-```
-
-## 运行项目
-
-``` python
-# dir为可选参数
-$ make start url="你的目标URL" [dir="下载目录"]
 ```
