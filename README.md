@@ -18,11 +18,11 @@ $ uv python install
 
 ```bash
 # 安装项目依赖和开发工具
-make install-dev
+make install
 
-# 或者手动安装
-uv pip install -e ".[dev]"
-uv pre-commit install
+# 或者手动执行
+uv venv
+uv pip install -e .
 ```
 
 ## 代码质量工具

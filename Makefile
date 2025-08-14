@@ -5,11 +5,9 @@ help: ## 显示帮助信息
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
 
 install: ## 安装项目依赖
-	uv pip install -e .
-
-install-dev: ## 安装开发依赖
+	uv venv
 	uv pip install -e ".[dev]"
-	pre-commit install
+	uv run pre-commit install
 
 format: ## 格式化代码
 	uv run black .
