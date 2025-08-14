@@ -31,4 +31,4 @@ clean: ## 清理缓存文件
 	find . -type d -name ".pytest_cache" -exec rm -rf {} +
 
 start: ## 运行项目
-	uv run python main.py --url=$(url) --dir=$(dir)
+	uv run python main.py --url=$(url) $(if $(dir),--dir=$(dir),)

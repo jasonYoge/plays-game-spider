@@ -30,3 +30,6 @@ ENV/
 
 # Scrapy
 .scrapy
+
+# Download
+download/
