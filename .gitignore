@@ -28,4 +28,4 @@ ENV/
 *.swp
 
 # Scrapy
-.scrapy 
+.scrapy
